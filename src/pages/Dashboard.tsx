@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useAirdrop } from "@/hooks/useAirdrop";
@@ -9,8 +10,8 @@ import { Upload } from "lucide-react";
 
 const Dashboard = () => {
   const { csvData, isUploading, isAirdropping, handleCsvUpload, initiateAirdrop } = useAirdrop();
-  const [tokenAmount, setTokenAmount] = React.useState<number>(0);
-  const [message, setMessage] = React.useState<string>('');
+  const [tokenAmount, setTokenAmount] = useState<number>(0);
+  const [message, setMessage] = useState<string>('');
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
