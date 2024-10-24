@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Home, Mail, User } from "lucide-react";
+import { Home, Mail, User, Settings as SettingsIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
@@ -22,6 +22,10 @@ const Navigation = () => {
             <Link to="/contact" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
               <Mail className="h-4 w-4" />
               Contact
+            </Link>
+            <Link to="/settings" className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
+              <SettingsIcon className="h-4 w-4" />
+              Settings
             </Link>
             <Link to="/auth">
               <Button variant="outline">
