@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,11 +10,11 @@ const Footer = () => {
           href="https://lyvena.xyz/" 
           target="_blank" 
           rel="noopener noreferrer"
-          className="mx-1 text-primary hover:underline"
+          className="mx-1 text-primary hover:underline hover:text-primary/80 transition-colors flex items-center"
         >
-          Lyvena.
+          Lyvena <Heart className="h-3 w-3 ml-1 text-red-500" />
         </a>
-        <span>All rights reserved.</span>
+        <span>. All rights reserved.</span>
       </div>
     </footer>
   );
