@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Activity, Calendar, Check, Cloud, Download, Upload, User, Settings } from 'lucide-react';
 import { useAirdrop } from '@/hooks/useAirdrop';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const { csvData, isUploading, isAirdropping, handleCsvUpload, initiateAirdrop } = useAirdrop();
@@ -26,8 +27,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      <header className="mb-8">
-        <h1 className="text-4xl font-bold text-gray-800">AI-PGF Donor Airdrop Tool</h1>
+      <header className="mb-8 flex justify-between items-center">
+        <div className="flex items-center gap-4">
+          <img src="/logo.svg" alt="AI-PGF Logo" className="h-12 w-12" />
+          <h1 className="text-4xl font-bold text-gray-800">AI-PGF Donor Airdrop Tool</h1>
+        </div>
+        <Link to="/auth">
+          <Button variant="outline">
+            <User className="mr-2 h-4 w-4" />
+            Sign In
+          </Button>
+        </Link>
       </header>
       <Tabs defaultValue="upload" className="w-full max-w-4xl mx-auto">
         <TabsList className="grid w-full grid-cols-2">
